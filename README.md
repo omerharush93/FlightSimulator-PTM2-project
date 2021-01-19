@@ -1,6 +1,8 @@
 # FlightSimulator-PTM2-project
 
-## Flght Simulator Control
+## FlghtGear Simulator Control GUI Application
+
+[![GUI Capture](/GUI.png)]
 
 ## Built With
 

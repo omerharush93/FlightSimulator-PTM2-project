@@ -2,7 +2,9 @@
 
 ## FlghtGear Simulator Control GUI Application
 
-[GUI Capture](/GUI.JPG)
+<p align="center">
+  <img src="/GUI.JPG" width="600">
+</p>
 
 ## Built With
 

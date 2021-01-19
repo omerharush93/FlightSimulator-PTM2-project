@@ -82,7 +82,7 @@ public class FlightController implements Initializable, Observer {
     private ViewModel viewModel;
     private String[] solution;
 
-    public void LoadData() {
+    public void LoadDate() {
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setFileFilter(new FileNameExtensionFilter("CSV Files","csv"));
         fileChooser.setCurrentDirectory(new File("./"));
@@ -147,9 +147,7 @@ public class FlightController implements Initializable, Observer {
             }
         }
     }
-
-
-//Popup window for to the connect button
+//Opens the popup window to the connect button
     public void Connect(){
         Parent root = null;
         try {
@@ -170,7 +168,7 @@ public class FlightController implements Initializable, Observer {
 
     }
 
-    //Popup window for to the calculate path button
+    //Opens the popup window to the calculate path button
     public void Calc(){
         Parent root = null;
 
@@ -212,7 +210,7 @@ public class FlightController implements Initializable, Observer {
             double h = H / mapData.length;
             double w = W / mapData[0].length;
             viewModel.findPath(h,w);
-
+            //boolean variable which indicates if this the first time you needed to find the shortest path
             path.setValue(true);
             Stage stage = (Stage) submit.getScene().getWindow();
             stage.close();
@@ -253,7 +251,6 @@ public class FlightController implements Initializable, Observer {
 
         }
     }
-
 //Draws an airplane on the map according to its position of flight
     public void drawAirplane(){
         if(airplaneX.getValue()!=null&&airplaneY.getValue()!=null)
@@ -287,7 +284,7 @@ public class FlightController implements Initializable, Observer {
         }
 
     }
-//Draw the shortest path
+//Draw the shortest path 
     public void drawMark(){
         double H = markX.getHeight();
         double W = markX.getWidth();
@@ -397,7 +394,7 @@ public class FlightController implements Initializable, Observer {
         double new_min=-1;
         return (((num-min)/(max-min)*(new_max-new_min)+new_min));
     }
-
+    
     private  boolean isInCircle(double x,double y){
         return (Math.pow((x-border.getCenterX()),2)+Math.pow((y-border.getCenterY()),2))<=Math.pow(border.getRadius()-Joystick.getRadius(),2);
     }
@@ -411,7 +408,7 @@ public class FlightController implements Initializable, Observer {
                 }
             };
 
-    //Data binding between View and the ViewModel
+    //Data binding between View and the ViewModel 
     public void setViewModel(ViewModel viewModel){
         this.viewModel=viewModel;
         throttle.valueProperty().bindBidirectional(viewModel.throttle);
@@ -457,7 +454,7 @@ public class FlightController implements Initializable, Observer {
         }
     }
 
-   //Get data from the mouse
+   //Get data from the mouse 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

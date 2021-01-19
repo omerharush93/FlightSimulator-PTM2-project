@@ -23,7 +23,7 @@ public class Main extends Application {
         viewModel.setModel(model);
         viewModel.addObserver(ctrl);
         ctrl.setViewModel(viewModel);
-        primaryStage.setTitle("FlightGear Simulator Control");
+        primaryStage.setTitle("Flight Gear Simulator");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
         primaryStage.setOnCloseRequest(event -> {
@@ -32,7 +32,7 @@ public class Main extends Application {
             command.executeCommand(disconnect);
             AutoPilotParser.thread1.interrupt();
             model.stopAll();
-            System.out.println("GoodBye!");
+            System.out.println("bye");
         });
 
     }
